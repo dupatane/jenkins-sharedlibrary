@@ -20,8 +20,7 @@ environment {
         } 
         stage('BUILD IMAGE') {
             	steps {
-			sh ' cd "/var/lib/jenkins/workspace/fleetapp/sourcecode/k8s-fleetman-api-gateway" '
-                	sh 'docker build -t $registry:$dockerTag .'             
+			sh 'cd "/var/lib/jenkins/workspace/fleetapp/sourcecode/k8s-fleetman-api-gateway" && docker build -t $registry:$dockerTag .'           
             	}
         }
         stage('PUSH HUB') { 
