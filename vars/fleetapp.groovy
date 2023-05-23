@@ -25,9 +25,11 @@ environment {
         }
         stage('PUSH HUB') { 
             	steps {
-			sh 'docker login'
+			withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]){
+			sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
 			sh 'docker push $registry:$dockerTag'                   	
-                }    
+			}    
+		}
         } 
     }
 }  
