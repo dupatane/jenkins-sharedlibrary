@@ -25,6 +25,7 @@ environment {
         }
         stage('PUSH HUB') { 
             	steps {
+			sh 'docker login'
 			sh 'docker push $registry:$dockerTag'                   	
                 }    
         } 
