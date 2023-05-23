@@ -1,4 +1,4 @@
-def call(String registryCred = 'a', String registryin = 'dupatane/fleet', String docTag = 'v1', String grepo = 'https://github.com/artisantek/kubernetes-fleetapp-project.git', String gbranch = 'main', String gitcred = 'a') {
+def call(String registryCred = 'a', String registryin = 'dupatane/fleet', String docTag = 'v1', String grepo = 'https://github.com/dupatane/kubernetes-fleetapp-project.git', String gbranch = 'main', String gitcred = 'a') {
 
 pipeline {
 environment { 
