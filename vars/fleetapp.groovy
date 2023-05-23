@@ -20,7 +20,7 @@ environment {
         } 
         stage('BUILD IMAGE') {
             	steps {
-                	sh 'docker build -t $registry:$dockerTag .'             
+                	sh 'docker build -t $registry:$dockerTag /var/lib/jenkins/workspace/fleetapp/'             
             	}
         }
         stage('PUSH HUB') { 
