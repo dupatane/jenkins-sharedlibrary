@@ -1,3 +1,5 @@
+@Library("fleetapp")_
+
 def call(String registryCred = 'a', String registryin = 'a', String docTag = 'a', String grepo = 'a', String gbranch = 'a', String gitcred = 'a') {
     pipeline {
         agent any
@@ -25,3 +27,4 @@ def call(String registryCred = 'a', String registryin = 'a', String docTag = 'a'
     }  
 }
 
+call('a', 'dupatane/docker', 'fleet', 'https://github.com/dupatane/kubernetes-fleetapp-project.git', 'main', 'a')
