@@ -23,5 +23,5 @@ def call(String registryCred = 'a', String registryin = 'a', String docTag = 'a'
             } 
         }
     }  
-
+}
 
