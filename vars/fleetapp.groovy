@@ -1,5 +1,3 @@
-
-
 def call(String registryCred = 'a', String registryin = 'a', String docTag = 'a', String grepo = 'a', String gbranch = 'a', String gitcred = 'a') {
     pipeline {
         agent any
